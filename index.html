@@ -67,10 +67,10 @@
             <fieldset class="field-group">
               <legend><span class="legend-number">01</span> Anschaffung &amp; Nutzung</legend>
               <div class="field-grid">
-                <label class="field"><span>Kaufpreis</span><span class="input-wrap"><input id="price" name="price" type="number" min="0" step="100" value="28000" required><span>€</span></span></label>
-                <label class="field"><span>Anzahlung</span><span class="input-wrap"><input id="down-payment" name="downPayment" type="number" min="0" step="100" value="5000" required><span>€</span></span></label>
-                <label class="field"><span>Wie lange fährst du das Auto?</span><span class="select-wrap"><select id="years" name="years"><option value="3">3 Jahre</option><option value="5" selected>5 Jahre</option><option value="8">8 Jahre</option><option value="10">10 Jahre</option></select></span></label>
-                <label class="field"><span>Gefahrene Kilometer pro Jahr</span><span class="input-wrap"><input id="distance" name="distance" type="number" min="1" step="500" value="12000" required><span>km</span></span></label>
+                <label class="field"><span>Kaufpreis</span><span class="input-wrap"><input id="price" type="number" min="0" step="100" value="28000" required><span>€</span></span></label>
+                <label class="field"><span>Anzahlung</span><span class="input-wrap"><input id="down-payment" type="number" min="0" step="100" value="5000" required><span>€</span></span></label>
+                <label class="field"><span>Wie lange fährst du das Auto?</span><span class="select-wrap"><select id="years"><option value="3">3 Jahre</option><option value="5" selected>5 Jahre</option><option value="8">8 Jahre</option><option value="10">10 Jahre</option></select></span></label>
+                <label class="field"><span>Gefahrene Kilometer pro Jahr</span><span class="input-wrap"><input id="distance" type="number" min="1" step="500" value="12000" required><span>km</span></span></label>
               </div>
             </fieldset>
 
@@ -81,27 +81,27 @@
                 <button class="drive-option" type="button" data-drive="diesel" aria-pressed="false"><span aria-hidden="true">◉</span> Diesel</button>
                 <button class="drive-option" type="button" data-drive="elektro" aria-pressed="false"><span aria-hidden="true">ϟ</span> Elektro</button>
               </div>
-              <input id="drive" name="drive" type="hidden" value="benziner">
+              <input id="drive" type="hidden" value="benziner">
               <div class="field-grid field-grid-energy">
-                <label class="field"><span id="energy-label">Verbrauch</span><span class="input-wrap"><input id="consumption" name="consumption" type="number" min="0" step="0.1" value="7.0" required><span id="consumption-unit">l / 100 km</span></span></label>
-                <label class="field"><span id="energy-price-label">Preis je Liter</span><span class="input-wrap"><input id="energy-price" name="energyPrice" type="number" min="0" step="0.01" value="1.80" required><span id="energy-price-unit">€ / l</span></span></label>
+                <label class="field"><span id="energy-label">Verbrauch</span><span class="input-wrap"><input id="consumption" type="number" min="0" step="0.1" value="7.0" required><span id="consumption-unit">l / 100 km</span></span></label>
+                <label class="field"><span id="energy-price-label">Preis je Liter</span><span class="input-wrap"><input id="energy-price" type="number" min="0" step="0.01" value="1.80" required><span id="energy-price-unit">€ / l</span></span></label>
               </div>
             </fieldset>
 
             <fieldset class="field-group">
               <legend><span class="legend-number">03</span> Kosten, die mitfahren</legend>
               <div class="field-grid">
-                <label class="field"><span>Versicherung pro Jahr</span><span class="input-wrap"><input id="insurance" name="insurance" type="number" min="0" step="10" value="900" required><span>€ / Jahr</span></span></label>
-                <label class="field"><span>Kfz-Steuer pro Jahr</span><span class="input-wrap"><input id="tax" name="tax" type="number" min="0" step="10" value="180" required><span>€ / Jahr</span></span></label>
-                <label class="field"><span>Wartung &amp; Reparaturen pro Jahr</span><span class="input-wrap"><input id="maintenance" name="maintenance" type="number" min="0" step="10" value="600" required><span>€ / Jahr</span></span></label>
-                <label class="field"><span>Geschätzter Verkaufspreis am Ende</span><span class="input-wrap"><input id="resale" name="resale" type="number" min="0" step="100" value="12000" required><span>€</span></span></label>
+                <label class="field"><span>Versicherung pro Jahr</span><span class="input-wrap"><input id="insurance" type="number" min="0" step="10" value="900" required><span>€ / Jahr</span></span></label>
+                <label class="field"><span>Kfz-Steuer pro Jahr</span><span class="input-wrap"><input id="tax" type="number" min="0" step="10" value="180" required><span>€ / Jahr</span></span></label>
+                <label class="field"><span>Wartung &amp; Reparaturen pro Jahr</span><span class="input-wrap"><input id="maintenance" type="number" min="0" step="10" value="600" required><span>€ / Jahr</span></span></label>
+                <label class="field"><span>Geschätzter Verkaufspreis am Ende</span><span class="input-wrap"><input id="resale" type="number" min="0" step="100" value="12000" required><span>€</span></span></label>
               </div>
             </fieldset>
 
             <details class="finance-details">
               <summary><span>Finanzierung genauer anpassen</span><span class="summary-hint">Optional <span aria-hidden="true">＋</span></span></summary>
               <div class="field-grid finance-grid">
-                <label class="field"><span>Effektiver Jahreszins</span><span class="input-wrap"><input id="interest" name="interest" type="number" min="0" max="50" step="0.1" value="5.9" required><span>%</span></span></label>
+                <label class="field"><span>Effektiver Jahreszins</span><span class="input-wrap"><input id="interest" type="number" min="0" max="50" step="0.1" value="5.9" required><span>%</span></span></label>
                 <p class="finance-help">Wir nehmen an, dass die Finanzierung über deine gesamte Haltedauer läuft. Ohne Anzahlung kannst du 0 € eintragen.</p>
               </div>
             </details>
@@ -134,7 +134,7 @@
       <section class="principle-section" id="prinzip">
         <div class="principle-mark" aria-hidden="true">↗</div>
         <div><p class="eyebrow">KEINE KOSTEN UNTER DEN TEPPICH</p><h2>Der Kaufpreis ist nur<br><span>der Anfang.</span></h2></div>
-        <p class="principle-copy">Viele Rechner zählen vor allem Sprit und Versicherung. Wir rechnen auch den Wertverlust und mögliche Finanzierungszinsen ein – damit du eine bessere Grundlage für deinen Vergleich hast.</p>
+        <p class="principle-copy">ECHTKOSTEN berücksichtigt neben Energie und laufenden Kosten auch Wertverlust und optionale Finanzierungszinsen. So vergleichst du die Schätzung anhand deiner eigenen Angaben.</p>
       </section>
 
       <section class="next-steps" aria-labelledby="next-steps-title">
@@ -169,7 +169,7 @@
     <footer class="site-footer">
       <a class="brand footer-brand" href="#start"><span class="brand-mark" aria-hidden="true">€</span><span>ECHT<span class="brand-light">KOSTEN</span></span></a>
       <p>Verstehen, was wirklich kostet.</p>
-      <div class="footer-links"><a href="vergleich.html">Vergleich</a><a href="methodik.html">Rechenmethode</a><a href="behalten-oder-wechseln.html">Behalten oder wechseln</a></div>
+      <div class="footer-links"><a href="vergleich.html">Vergleich</a><a href="methodik.html">Rechenmethode</a><a href="behalten-oder-wechseln.html">Behalten oder wechseln</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
       <span class="footer-meta">Kostenloser Rechner · Ohne Anmeldung</span>
     </footer>
   </body>

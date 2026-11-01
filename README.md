@@ -9,6 +9,11 @@ Eine statische, deutschsprachige Website für verständliche Autokosten. Sie lä
 - `behalten-oder-wechseln.html`: Schritt für Schritt erklären, welche Werte in einen fairen Vergleich gehören
 - `methodik.html`: Formeln, Annahmen und Grenzen der Schätzung offenlegen
 
+Zusätzlich:
+
+- Impressum und Kontakt: impressum.html
+- Datenschutzhinweise: datenschutz.html
+
 ## Lokal öffnen
 
 Öffne `index.html` in einem aktuellen Browser. Es ist kein Build-Schritt nötig. Für die anderen Seiten nutze die Navigation oder öffne die jeweilige HTML-Datei.
@@ -19,6 +24,6 @@ Die Eingaben werden im Browser verarbeitet und nicht an ECHTKOSTEN übermittelt.
 
 Bei Vergleichen gelten dieselbe Haltedauer und dieselbe Jahresfahrleistung für beide Szenarien. Für ein bereits vorhandenes Auto ist mit „Wert heute“ sein heutiger Marktwert gemeint, nicht sein früherer Kaufpreis.
 
-## Vor einem öffentlichen Start
+## Rechtliche Hinweise und öffentlicher Start
 
-Es fehlen noch deine geprüften Kontaktdaten für ein Impressum, eine auf den tatsächlichen Hosting- und Werbeeinsatz abgestimmte Datenschutzerklärung sowie eine ausgewählte Hosting- und Domainlösung. Affiliate-Links und Anzeigen sind absichtlich nicht aktiv.
+Die Seiten impressum.html und datenschutz.html beschreiben den derzeitigen Projektstand mit GitHub Pages. Vor einer Monetarisierung oder dem Einbinden weiterer Dienste sind Angaben und Datenverarbeitung erneut zu prüfen. Affiliate-Links und Anzeigen sind derzeit nicht aktiv.
