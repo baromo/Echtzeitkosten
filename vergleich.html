@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f4">
+    <meta name="description" content="Vergleiche zwei Autos über dieselbe Haltedauer – mit Wertverlust, Finanzierung, Energie, Versicherung, Steuer und Wartung.">
+    <title>Autos vergleichen – ECHTKOSTEN</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="vergleich.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#vergleichen">Zum Vergleich springen</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="ECHTKOSTEN Startseite"><span class="brand-mark" aria-hidden="true">€</span><span>ECHT<span class="brand-light">KOSTEN</span></span></a>
+        <nav aria-label="Hauptnavigation">
+          <a href="index.html#rechner">Autokostenrechner</a>
+          <a href="vergleich.html" aria-current="page">Autos vergleichen</a>
+          <a href="methodik.html">So rechnen wir</a>
+        </nav>
+        <a class="nav-cta" href="index.html#rechner">Ein Auto berechnen <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-inner">
+          <p class="eyebrow"><a href="index.html">ECHTKOSTEN</a> <span aria-hidden="true">/</span> VERGLEICH</p>
+          <h1>Welches Auto kostet dich <span>wirklich weniger?</span></h1>
+          <p class="hero-lede">Vergleiche zwei Fahrzeuge mit denselben Kilometern und derselben Haltedauer. Du kannst Benzin gegen Elektro rechnen oder dein jetziges Auto einem möglichen Ersatz gegenüberstellen.</p>
+          <div class="hero-proof"><span class="proof-icon" aria-hidden="true">✓</span> Deine Angaben bleiben in deinem Browser · Beispielwerte sind änderbar</div>
+        </div>
+      </section>
+
+      <section class="calculator-section compare-section" id="vergleichen">
+        <div class="section-heading">
+          <div><p class="eyebrow">ZWEI SZENARIEN, EIN VERGLEICH</p><h2>Gleiche Strecke. <span>Echte Kosten.</span></h2></div>
+          <p>Nutze für beide Autos denselben Zeitraum und dieselbe Jahresfahrleistung. Je genauer deine Angaben, desto hilfreicher die Schätzung.</p>
+        </div>
+
+        <form class="compare-form" id="compare-form">
+          <div class="shared-inputs">
+            <label class="field"><span>Vergleichszeitraum</span><span class="select-wrap"><select id="compare-years"><option value="3">3 Jahre</option><option value="5" selected>5 Jahre</option><option value="8">8 Jahre</option><option value="10">10 Jahre</option></select></span></label>
+            <label class="field"><span>Gefahrene Kilometer pro Jahr</span><span class="input-wrap"><input id="compare-distance" type="number" min="1" step="500" value="12000" required><span>km</span></span></label>
+            <p class="shared-note"><span aria-hidden="true">ⓘ</span> Die Beispielwerte zeigen nur, wie der Vergleich funktioniert. Ersetze sie durch deine Zahlen.</p>
+          </div>
+
+          <div class="scenario-grid">
+            <fieldset class="scenario-card" data-scenario="a">
+              <legend><span class="scenario-letter">A</span> FAHRZEUG A</legend>
+              <label class="field scenario-name-field"><span>Name des Szenarios</span><input class="plain-input" id="name-a" type="text" value="Benziner (Beispiel)" maxlength="40" required></label>
+              <div class="scenario-fields">
+                <label class="field"><span>Wert heute / Kaufpreis</span><span class="input-wrap"><input id="start-a" type="number" min="0" step="100" value="20000" required><span>€</span></span></label>
+                <label class="field"><span>Geschätzter Wert am Ende</span><span class="input-wrap"><input id="end-a" type="number" min="0" step="100" value="8000" required><span>€</span></span></label>
+                <label class="field"><span>Antrieb</span><span class="select-wrap"><select id="drive-a"><option value="benziner" selected>Benzin</option><option value="diesel">Diesel</option><option value="elektro">Elektro</option></select></span></label>
+                <label class="field"><span id="consumption-label-a">Verbrauch</span><span class="input-wrap"><input id="consumption-a" type="number" min="0" step="0.1" value="7" required><span id="consumption-unit-a">l / 100 km</span></span></label>
+                <label class="field"><span id="energy-price-label-a">Preis je Liter</span><span class="input-wrap"><input id="energy-price-a" type="number" min="0" step="0.01" value="1.8" required><span id="energy-price-unit-a">€ / l</span></span></label>
+                <label class="field"><span>Versicherung pro Jahr</span><span class="input-wrap"><input id="insurance-a" type="number" min="0" step="10" value="900" required><span>€ / Jahr</span></span></label>
+                <label class="field"><span>Kfz-Steuer pro Jahr</span><span class="input-wrap"><input id="tax-a" type="number" min="0" step="10" value="180" required><span>€ / Jahr</span></span></label>
+                <label class="field"><span>Wartung &amp; Reparaturen pro Jahr</span><span class="input-wrap"><input id="maintenance-a" type="number" min="0" step="10" value="700" required><span>€ / Jahr</span></span></label>
+              </div>
+              <details class="finance-details scenario-finance">
+                <summary><span>Finanzierung</span><span class="summary-hint">Optional <span aria-hidden="true">＋</span></span></summary>
+                <div class="scenario-fields finance-fields">
+                  <label class="field"><span>Anzahlung</span><span class="input-wrap"><input id="down-a" type="number" min="0" step="100" value="0" required><span>€</span></span></label>
+                  <label class="field"><span>Effektiver Jahreszins</span><span class="input-wrap"><input id="interest-a" type="number" min="0" max="50" step="0.1" value="0" required><span>%</span></span></label>
+                </div>
+                <p class="finance-help">Für ein bereits bezahltes Auto lass Anzahlung und Zins auf 0 €. Sein heutiger Marktwert zählt als Wert heute.</p>
+              </details>
+            </fieldset>
+
+            <fieldset class="scenario-card scenario-card-b" data-scenario="b">
+              <legend><span class="scenario-letter scenario-letter-b">B</span> FAHRZEUG B</legend>
+              <label class="field scenario-name-field"><span>Name des Szenarios</span><input class="plain-input" id="name-b" type="text" value="Elektroauto (Beispiel)" maxlength="40" required></label>
+              <div class="scenario-fields">
+                <label class="field"><span>Wert heute / Kaufpreis</span><span class="input-wrap"><input id="start-b" type="number" min="0" step="100" value="34000" required><span>€</span></span></label>
+                <label class="field"><span>Geschätzter Wert am Ende</span><span class="input-wrap"><input id="end-b" type="number" min="0" step="100" value="17000" required><span>€</span></span></label>
+                <label class="field"><span>Antrieb</span><span class="select-wrap"><select id="drive-b"><option value="benziner">Benzin</option><option value="diesel">Diesel</option><option value="elektro" selected>Elektro</option></select></span></label>
+                <label class="field"><span id="consumption-label-b">Verbrauch</span><span class="input-wrap"><input id="consumption-b" type="number" min="0" step="0.1" value="18" required><span id="consumption-unit-b">kWh / 100 km</span></span></label>
+                <label class="field"><span id="energy-price-label-b">Preis je kWh</span><span class="input-wrap"><input id="energy-price-b" type="number" min="0" step="0.01" value="0.32" required><span id="energy-price-unit-b">€ / kWh</span></span></label>
+                <label class="field"><span>Versicherung pro Jahr</span><span class="input-wrap"><input id="insurance-b" type="number" min="0" step="10" value="850" required><span>€ / Jahr</span></span></label>
+                <label class="field"><span>Kfz-Steuer pro Jahr</span><span class="input-wrap"><input id="tax-b" type="number" min="0" step="10" value="0" required><span>€ / Jahr</span></span></label>
+                <label class="field"><span>Wartung &amp; Reparaturen pro Jahr</span><span class="input-wrap"><input id="maintenance-b" type="number" min="0" step="10" value="450" required><span>€ / Jahr</span></span></label>
+              </div>
+              <details class="finance-details scenario-finance">
+                <summary><span>Finanzierung</span><span class="summary-hint">Optional <span aria-hidden="true">＋</span></span></summary>
+                <div class="scenario-fields finance-fields">
+                  <label class="field"><span>Anzahlung</span><span class="input-wrap"><input id="down-b" type="number" min="0" step="100" value="5000" required><span>€</span></span></label>
+                  <label class="field"><span>Effektiver Jahreszins</span><span class="input-wrap"><input id="interest-b" type="number" min="0" max="50" step="0.1" value="5.9" required><span>%</span></span></label>
+                </div>
+                <p class="finance-help">Wir nehmen an, dass die Finanzierung über den gewählten Vergleichszeitraum läuft.</p>
+              </details>
+            </fieldset>
+          </div>
+
+          <p class="form-note"><span aria-hidden="true">ⓘ</span> Beim Vergleich „behalten oder wechseln“: Trage für dein aktuelles Auto seinen heutigen Marktwert und den erwarteten Wert am Ende ein. Das ist eine Schätzung, keine Kaufempfehlung.</p>
+          <button class="calculate-button compare-button" type="submit">Kosten vergleichen <span aria-hidden="true">→</span></button>
+        </form>
+
+        <section class="compare-output" id="compare-output" aria-live="polite" aria-atomic="true">
+          <div class="compare-output-heading"><div><p class="eyebrow">DEIN VERGLEICH</p><h2 id="comparison-winner">Passe die Zahlen an und vergleiche.</h2></div><span class="result-period" id="comparison-period">über 5 Jahre</span></div>
+          <p class="comparison-summary" id="comparison-summary">Die Ergebnisse nutzen dieselben Kilometer und denselben Zeitraum.</p>
+          <div class="comparison-results">
+            <article class="comparison-result-card" id="result-card-a"><div class="comparison-result-top"><span class="scenario-letter">A</span><strong id="result-name-a">Fahrzeug A</strong></div><div class="comparison-main-number"><span id="total-a">–</span><small>Gesamtkosten</small></div><div class="comparison-small-metrics"><span><small>pro Monat</small><strong id="monthly-a">–</strong></span><span><small>pro Kilometer</small><strong id="perkm-a">–</strong></span></div><div class="comparison-breakdown" id="breakdown-a"></div></article>
+            <article class="comparison-result-card" id="result-card-b"><div class="comparison-result-top"><span class="scenario-letter scenario-letter-b">B</span><strong id="result-name-b">Fahrzeug B</strong></div><div class="comparison-main-number"><span id="total-b">–</span><small>Gesamtkosten</small></div><div class="comparison-small-metrics"><span><small>pro Monat</small><strong id="monthly-b">–</strong></span><span><small>pro Kilometer</small><strong id="perkm-b">–</strong></span></div><div class="comparison-breakdown" id="breakdown-b"></div></article>
+          </div>
+          <p class="compare-caveat">Das Ergebnis vergleicht nur die eingetragenen Kosten. Ladeverluste, individuelle Reparaturrisiken, Komfort und persönliche Anforderungen sind nicht eingerechnet. <a href="methodik.html">So rechnen wir.</a></p>
+        </section>
+      </section>
+
+      <section class="comparison-guide">
+        <div class="guide-copy"><p class="eyebrow">SO NUTZT DU DEN VERGLEICH</p><h2>Zwei Beispiele,<br><span>ein Rechner.</span></h2><p>Für Benzin gegen Elektro wählst du die passende Antriebsart und trägst deine Energiepreise ein. Für „behalten oder wechseln“ vergleichst du den heutigen Marktwert deines aktuellen Autos mit dem Kaufpreis des Ersatzes.</p></div>
+        <div class="guide-steps"><div><span>01</span><p><strong>Gleiche Nutzung</strong><small>Setze denselben Zeitraum und dieselbe Jahresfahrleistung.</small></p></div><div><span>02</span><p><strong>Werte ehrlich schätzen</strong><small>Nutze Angebote, Abrechnungen und realistische Verkaufspreise.</small></p></div><div><span>03</span><p><strong>Ergebnis einordnen</strong><small>Die günstigere Zahl ersetzt nicht deine persönlichen Bedürfnisse.</small></p></div></div>
+      </section>
+
+      <section class="closing-cta"><div><p class="eyebrow">TRANSPARENT VERGLEICHEN</p><h2>Jede Annahme bleibt änderbar.</h2></div><a href="methodik.html" class="primary-link">Rechenmethode lesen <span aria-hidden="true">→</span></a></section>
+    </main>
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">€</span><span>ECHT<span class="brand-light">KOSTEN</span></span></a>
+      <p>Verstehen, was wirklich kostet.</p>
+      <div class="footer-links"><a href="index.html#rechner">Kostenrechner</a><a href="methodik.html">Rechenmethode</a><a href="behalten-oder-wechseln.html">Behalten oder wechseln</a></div>
+      <span class="footer-meta">Kostenloser Rechner · Ohne Anmeldung</span>
+    </footer>
+  </body>
+</html>

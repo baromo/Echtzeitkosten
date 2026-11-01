@@ -1,1 +1,176 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f4">
+    <meta name="description" content="Finde heraus, was dein Auto wirklich kostet – inklusive Wertverlust, Finanzierung und laufender Kosten.">
+    <title>ECHTKOSTEN – Was dein Auto wirklich kostet</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#rechner">Zum Rechner springen</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="#start" aria-label="ECHTKOSTEN Startseite">
+          <span class="brand-mark" aria-hidden="true">€</span>
+          <span>ECHT<span class="brand-light">KOSTEN</span></span>
+        </a>
+        <nav aria-label="Hauptnavigation">
+          <a href="#rechner">Autokostenrechner</a>
+          <a href="vergleich.html">Autos vergleichen</a>
+          <a href="methodik.html">So rechnen wir</a>
+        </nav>
+        <a class="nav-cta" href="#rechner">Kosten berechnen <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
 
+    <main id="start">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> KLARHEIT, DIE SICH RECHNET</p>
+          <h1>Dein Auto kostet mehr als <span>die Tankfüllung.</span></h1>
+          <p class="hero-lede">Sieh, was wirklich zusammenkommt: Wertverlust, Finanzierung und die Kosten, die im Alltag gern untergehen.</p>
+          <a class="primary-link" href="#rechner">Meine echten Autokosten berechnen <span aria-hidden="true">↓</span></a>
+          <div class="hero-proof"><span class="proof-icon" aria-hidden="true">✓</span> Kostenlos · ohne Anmeldung · transparent gerechnet</div>
+        </div>
+        <div class="hero-visual" aria-label="Illustration der monatlichen Autokosten" role="img">
+          <div class="visual-sun"></div>
+          <div class="visual-caption"><span>MEHR ALS SPRIT</span><strong>Der ganze<br>Preis im Blick.</strong></div>
+          <div class="road-line"></div>
+          <div class="car-illustration" aria-hidden="true">
+            <div class="car-shadow"></div><div class="car-body"><div class="car-window"></div><div class="car-window car-window-back"></div><div class="car-light"></div></div>
+            <div class="wheel wheel-one"></div><div class="wheel wheel-two"></div>
+          </div>
+          <div class="visual-note"><span class="note-arrow">↗</span><span>Wertverlust<br><strong>zählt mit.</strong></span></div>
+          <div class="visual-tag">ECHT DURCHRECHNEN</div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Vorteile">
+        <div><span class="strip-icon">◷</span><span><strong>In 2 Minuten</strong><small>zum Überblick</small></span></div>
+        <div><span class="strip-icon">◎</span><span><strong>Alle Kosten</strong><small>statt nur Sprit</small></span></div>
+        <div><span class="strip-icon">⌁</span><span><strong>Deine Angaben</strong><small>dein Ergebnis</small></span></div>
+      </section>
+
+      <section class="calculator-section" id="rechner">
+        <div class="section-heading">
+          <div><p class="eyebrow">DER AUTOKOSTENRECHNER</p><h2>Was kostet dein Auto <span>wirklich?</span></h2></div>
+          <p>Trag ein, was du weißt. Wo du nur schätzt, kannst du die Zahl später ändern.</p>
+        </div>
+
+        <div class="calculator-layout">
+          <form class="calculator-card" id="cost-form">
+            <div class="form-topline"><span class="form-step">DEIN AUTO</span><span class="optional-note">Beispielwerte sind anpassbar</span></div>
+
+            <fieldset class="field-group">
+              <legend><span class="legend-number">01</span> Anschaffung &amp; Nutzung</legend>
+              <div class="field-grid">
+                <label class="field"><span>Kaufpreis</span><span class="input-wrap"><input id="price" name="price" type="number" min="0" step="100" value="28000" required><span>€</span></span></label>
+                <label class="field"><span>Anzahlung</span><span class="input-wrap"><input id="down-payment" name="downPayment" type="number" min="0" step="100" value="5000" required><span>€</span></span></label>
+                <label class="field"><span>Wie lange fährst du das Auto?</span><span class="select-wrap"><select id="years" name="years"><option value="3">3 Jahre</option><option value="5" selected>5 Jahre</option><option value="8">8 Jahre</option><option value="10">10 Jahre</option></select></span></label>
+                <label class="field"><span>Gefahrene Kilometer pro Jahr</span><span class="input-wrap"><input id="distance" name="distance" type="number" min="1" step="500" value="12000" required><span>km</span></span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field-group">
+              <legend><span class="legend-number">02</span> Antrieb &amp; Energie</legend>
+              <div class="drive-options" role="group" aria-label="Antriebsart auswählen">
+                <button class="drive-option is-selected" type="button" data-drive="benziner" aria-pressed="true"><span aria-hidden="true">⛽</span> Benzin</button>
+                <button class="drive-option" type="button" data-drive="diesel" aria-pressed="false"><span aria-hidden="true">◉</span> Diesel</button>
+                <button class="drive-option" type="button" data-drive="elektro" aria-pressed="false"><span aria-hidden="true">ϟ</span> Elektro</button>
+              </div>
+              <input id="drive" name="drive" type="hidden" value="benziner">
+              <div class="field-grid field-grid-energy">
+                <label class="field"><span id="energy-label">Verbrauch</span><span class="input-wrap"><input id="consumption" name="consumption" type="number" min="0" step="0.1" value="7.0" required><span id="consumption-unit">l / 100 km</span></span></label>
+                <label class="field"><span id="energy-price-label">Preis je Liter</span><span class="input-wrap"><input id="energy-price" name="energyPrice" type="number" min="0" step="0.01" value="1.80" required><span id="energy-price-unit">€ / l</span></span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="field-group">
+              <legend><span class="legend-number">03</span> Kosten, die mitfahren</legend>
+              <div class="field-grid">
+                <label class="field"><span>Versicherung pro Jahr</span><span class="input-wrap"><input id="insurance" name="insurance" type="number" min="0" step="10" value="900" required><span>€ / Jahr</span></span></label>
+                <label class="field"><span>Kfz-Steuer pro Jahr</span><span class="input-wrap"><input id="tax" name="tax" type="number" min="0" step="10" value="180" required><span>€ / Jahr</span></span></label>
+                <label class="field"><span>Wartung &amp; Reparaturen pro Jahr</span><span class="input-wrap"><input id="maintenance" name="maintenance" type="number" min="0" step="10" value="600" required><span>€ / Jahr</span></span></label>
+                <label class="field"><span>Geschätzter Verkaufspreis am Ende</span><span class="input-wrap"><input id="resale" name="resale" type="number" min="0" step="100" value="12000" required><span>€</span></span></label>
+              </div>
+            </fieldset>
+
+            <details class="finance-details">
+              <summary><span>Finanzierung genauer anpassen</span><span class="summary-hint">Optional <span aria-hidden="true">＋</span></span></summary>
+              <div class="field-grid finance-grid">
+                <label class="field"><span>Effektiver Jahreszins</span><span class="input-wrap"><input id="interest" name="interest" type="number" min="0" max="50" step="0.1" value="5.9" required><span>%</span></span></label>
+                <p class="finance-help">Wir nehmen an, dass die Finanzierung über deine gesamte Haltedauer läuft. Ohne Anzahlung kannst du 0 € eintragen.</p>
+              </div>
+            </details>
+
+            <p class="form-note"><span aria-hidden="true">ⓘ</span> Beispielwerte sind keine Preisempfehlung. Nutze für genaue Zahlen deine Angebote und Abrechnungen.</p>
+            <button class="calculate-button" type="submit">Meine Kosten berechnen <span aria-hidden="true">→</span></button>
+          </form>
+
+          <aside class="result-card" id="result" aria-live="polite" aria-atomic="true">
+            <div class="result-header"><span class="result-kicker"><span class="result-dot"></span> DEIN ERGEBNIS</span><span class="result-period" id="result-period">auf 5 Jahre</span></div>
+            <p class="result-label">Dein Auto kostet dich im Schnitt</p>
+            <div class="result-monthly"><span id="monthly-cost">–</span><small>pro Monat</small></div>
+            <div class="result-metrics">
+              <div><span>pro Tag</span><strong id="daily-cost">–</strong></div>
+              <div><span>pro Kilometer</span><strong id="per-km-cost">–</strong></div>
+            </div>
+            <div class="result-divider"></div>
+            <div class="breakdown-heading"><strong>Das steckt drin</strong><span id="total-cost">– gesamt</span></div>
+            <div class="breakdown" id="breakdown">
+              <div class="breakdown-row"><span class="breakdown-name"><i class="break-dot depreciation-dot"></i>Wertverlust</span><strong>–</strong></div>
+              <div class="breakdown-row"><span class="breakdown-name"><i class="break-dot energy-dot"></i>Energie</span><strong>–</strong></div>
+              <div class="breakdown-row"><span class="breakdown-name"><i class="break-dot fixed-dot"></i>Versicherung, Steuer &amp; Wartung</span><strong>–</strong></div>
+              <div class="breakdown-row"><span class="breakdown-name"><i class="break-dot interest-dot"></i>Zinsen</span><strong>–</strong></div>
+            </div>
+            <p class="result-footnote">Eine Schätzung auf Basis deiner Angaben. Die tatsächlichen Kosten können abweichen.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="principle-section" id="prinzip">
+        <div class="principle-mark" aria-hidden="true">↗</div>
+        <div><p class="eyebrow">KEINE KOSTEN UNTER DEN TEPPICH</p><h2>Der Kaufpreis ist nur<br><span>der Anfang.</span></h2></div>
+        <p class="principle-copy">Viele Rechner zählen vor allem Sprit und Versicherung. Wir rechnen auch den Wertverlust und mögliche Finanzierungszinsen ein – damit du eine bessere Grundlage für deinen Vergleich hast.</p>
+      </section>
+
+      <section class="next-steps" aria-labelledby="next-steps-title">
+        <div class="next-steps-heading">
+          <p class="eyebrow">MEHR ALS EIN RECHNER</p>
+          <h2 id="next-steps-title">Gute Entscheidungen beginnen mit <span>dem Vergleich.</span></h2>
+          <p>Vergleiche zwei Fahrzeuge mit denselben Kilometern und derselben Haltedauer. Oder prüfe, ob sich ein Wechsel für dich rechnet.</p>
+        </div>
+        <div class="next-steps-cards">
+          <a class="next-card" href="vergleich.html#vergleichen">
+            <span class="next-card-mark" aria-hidden="true">↔</span>
+            <span class="next-card-copy"><strong>Benzin oder Elektro?</strong><small>Energie, Wertverlust und laufende Kosten gemeinsam vergleichen.</small></span>
+            <span class="next-card-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="next-card" href="behalten-oder-wechseln.html">
+            <span class="next-card-mark next-card-mark-warm" aria-hidden="true">⌁</span>
+            <span class="next-card-copy"><strong>Behalten oder wechseln?</strong><small>Stelle den Wert deines Autos heute den Kosten eines anderen gegenüber.</small></span>
+            <span class="next-card-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="home-method-note">
+        <div><p class="eyebrow">NACHVOLLZIEHBAR STATT BLACKBOX</p><h2>Jede Zahl hat <span>eine Erklärung.</span></h2></div>
+        <p>Du gibst die Annahmen vor. Wir erklären, wie Wertverlust, Finanzierung und laufende Kosten in das Ergebnis eingehen.</p>
+        <a class="text-link" href="methodik.html">Unsere Rechenmethode ansehen <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="closing-cta"><div><p class="eyebrow">JETZT MIT DEINEN ZAHLEN</p><h2>Mach die Kosten sichtbar.</h2></div><a href="#rechner" class="primary-link">Rechner öffnen <span aria-hidden="true">↑</span></a></section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#start"><span class="brand-mark" aria-hidden="true">€</span><span>ECHT<span class="brand-light">KOSTEN</span></span></a>
+      <p>Verstehen, was wirklich kostet.</p>
+      <div class="footer-links"><a href="vergleich.html">Vergleich</a><a href="methodik.html">Rechenmethode</a><a href="behalten-oder-wechseln.html">Behalten oder wechseln</a></div>
+      <span class="footer-meta">Kostenloser Rechner · Ohne Anmeldung</span>
+    </footer>
+  </body>
+</html>
